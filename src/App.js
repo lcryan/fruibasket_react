@@ -27,14 +27,38 @@ function App() {
 
             <h1>Fruitmand bezorgservice</h1>
 
-            <span className="counter-output"/>
-<span className="bananas">
-            <h3> 🍌 Bananen </h3>
-            <button className="control-button" onClick={decrease}>-</button>
-            <div> {counter} </div>
-            <button className="control-button" onClick={increase}>+</button>
-            <button className="reset-button" onClick={reset}>reset</button>
-        </span>
+
+            <div className="container-strawberries">
+                <h3 className="strawberry-name"> 🍓 Aardbeien </h3>
+                <button className="control-button" onClick={decrease}>-</button>
+                <div className="counter"> {counter} </div>
+                <button className="control-button" onClick={increase}>+</button>
+                <button className="reset-button" onClick={reset}>reset</button>
+            </div>
+
+            <div className="container-bananas">
+                <h3 className="banana-name"> 🍌 Bananen </h3>
+                <button className="control-button" onClick={decrease}>-</button>
+                <div className="counter"> {counter} </div>
+                <button className="control-button" onClick={increase}>+</button>
+                <button className="reset-button" onClick={reset}>reset</button>
+            </div>
+
+            <div className="container-apples">
+                <h3 className="apples-name"> 🍏 Appels </h3>
+                <button className="control-button" onClick={decrease}>-</button>
+                <div className="counter"> {counter} </div>
+                <button className="control-button" onClick={increase}>+</button>
+                <button className="reset-button" onClick={reset}>reset</button>
+            </div>
+
+            <div className="container-kiwis">
+                <h3 className="kiwi-name"> 🥝 Kiwi's </h3>
+                <button className="control-button" onClick={decrease}>-</button>
+                <div className="counter"> {counter} </div>
+                <button className="control-button" onClick={increase}>+</button>
+                <button className="reset-button" onClick={reset}>reset</button>
+            </div>
         </>
     );
 }

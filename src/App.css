@@ -9,11 +9,24 @@ h1 {
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-width: 200px;
     font-size: 30px;
-
+    border-color: grey;
+    border-style: solid ;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-left: 515px;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 20px
 }
 
+
 .control-button, .reset-button {
-    height: 20px;
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: darkturquoise;
+    margin-left: 5px;
+    margin-right: 5px;
 }

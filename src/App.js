@@ -33,7 +33,7 @@ function App() {
                 <button className="control-button" onClick={decrease}>-</button>
                 <div className="counter"> {counter} </div>
                 <button className="control-button" onClick={increase}>+</button>
-                <button className="reset-button" onClick={reset}>reset</button>
+
             </div>
 
             <div className="container-bananas">
@@ -41,7 +41,7 @@ function App() {
                 <button className="control-button" onClick={decrease}>-</button>
                 <div className="counter"> {counter} </div>
                 <button className="control-button" onClick={increase}>+</button>
-                <button className="reset-button" onClick={reset}>reset</button>
+
             </div>
 
             <div className="container-apples">
@@ -49,7 +49,7 @@ function App() {
                 <button className="control-button" onClick={decrease}>-</button>
                 <div className="counter"> {counter} </div>
                 <button className="control-button" onClick={increase}>+</button>
-                <button className="reset-button" onClick={reset}>reset</button>
+
             </div>
 
             <div className="container-kiwis">
@@ -57,8 +57,14 @@ function App() {
                 <button className="control-button" onClick={decrease}>-</button>
                 <div className="counter"> {counter} </div>
                 <button className="control-button" onClick={increase}>+</button>
-                <button className="reset-button" onClick={reset}>reset</button>
+
+                </div>
+
+            <div className="reset-button">
+            <button className="reset" onClick={reset}>reset</button>
             </div>
+
+
         </>
     );
 }

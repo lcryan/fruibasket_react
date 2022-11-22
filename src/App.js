@@ -57,16 +57,18 @@ function App() {
                 <button className="control-button" onClick={decrease}>-</button>
                 <div className="counter"> {counter} </div>
                 <button className="control-button" onClick={increase}>+</button>
-
-                </div>
-
-            <div className="reset-button">
-            <button className="reset" onClick={reset}>reset</button>
             </div>
-
-
+                <div className="reset-button">
+                <button className="reset" onClick={reset}>reset</button>
+            </div>
         </>
     );
 }
 
 export default App;
+
+
+
+
+
+

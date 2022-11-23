@@ -1,6 +1,7 @@
-body{
+body {
     font-family: "Comic Sans MS", sans-serif;
 }
+
 h1 {
     display: flex;
     justify-content: center;
@@ -25,7 +26,7 @@ h1 {
     color: antiquewhite;
 }
 
-.container-strawberries{
+.container-strawberries {
     background-color: darkred;
 }
 
@@ -33,13 +34,14 @@ h1 {
     background-color: #cc7722;
 }
 
-.container-apples{
-background-color: darkgreen;
+.container-apples {
+    background-color: darkgreen;
 }
 
-.container-kiwis{
+.container-kiwis {
     background-color: darkolivegreen;
 }
+
 .control-button {
     height: 35px;
     width: 35px;
@@ -74,7 +76,7 @@ background-color: darkgreen;
 
 }
 
-.fruit-logo{
+.fruit-logo {
     width: 300px;
     margin-top: 20px;
     margin-right: 20px;

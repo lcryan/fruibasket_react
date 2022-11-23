@@ -1,7 +1,11 @@
-
+body{
+    font-family: "Comic Sans MS", sans-serif;
+}
 h1 {
     display: flex;
     justify-content: center;
+    color: grey;
+    margin-top: 50px;
 }
 
 .container-bananas, .container-strawberries, .container-apples, .container-kiwis {
@@ -17,10 +21,25 @@ h1 {
     margin-left: 515px;
     width: 400px;
     margin-top: 50px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    color: antiquewhite;
 }
 
+.container-strawberries{
+    background-color: darkred;
+}
 
+.container-bananas {
+    background-color: #cc7722;
+}
+
+.container-apples{
+background-color: darkgreen;
+}
+
+.container-kiwis{
+    background-color: darkolivegreen;
+}
 .control-button {
     height: 35px;
     width: 35px;
@@ -53,4 +72,15 @@ h1 {
     font-size: 20px;
     font-weight: bold;
 
+}
+
+.fruit-logo{
+    width: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.fruit-logo-container {
+    display: flex;
+    justify-content: flex-end;
 }

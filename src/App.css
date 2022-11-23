@@ -86,3 +86,13 @@ h1 {
     display: flex;
     justify-content: flex-end;
 }
+
+form{
+    margin:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+
+}
+

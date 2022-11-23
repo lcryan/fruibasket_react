@@ -15,8 +15,14 @@ function App() {
     const [nameValue, setNameValue] = React.useState('');
     const [lastNameValue, setLastNameValue] = useState('')
     const [ageValue, setAgeValue] = React.useState('');
+    const [postCodeValue, setPostCodeValue] = useState('');
+    const [selectBoxValue, setSelectBoxValue] = useState('')
     const [messageValue, setMessageValue] = React.useState('');
     const [checkBoxValue, setCheckBoxValue] = React.useState(false);
+
+    function handleChange (e){
+        setSelectBoxValue(e.target.value)
+    }
 
     function strawberryAdd() {
         setStrawberries(strawberries + 1)
@@ -80,9 +86,10 @@ function App() {
         setKiwis(0)
     }
 
+
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(nameValue, ageValue, messageValue, checkBoxValue)
+        console.log(nameValue, ageValue, messageValue, lastNameValue, checkBoxValue,selectBoxValue)
     }
 
 
@@ -131,7 +138,6 @@ function App() {
             </div>
 
 
-            {/* lalalalla*/}
             <div className="from-document">
 
                 <form onSubmit={handleSubmit}>
@@ -146,12 +152,12 @@ function App() {
                         />
                     </label>
 
-                    <label htmlFor="name">
+                    <label htmlFor="last-name">
                         Achternaam:
                         <input
                             type="text"
                             id="last-name"
-                            name="last-namne"
+                            name="last-name"
                             value={lastNameValue}
                             onChange={(e) => setLastNameValue(e.target.value)}
                         />
@@ -161,14 +167,36 @@ function App() {
                         Age:
                         <input
                             type="number"
-                            id="user age"
-                            name="user age"
+                            id="user-age"
+                            name="user-age"
                             min="18"
                             max="100"
                             value={ageValue}
                             onChange={(e) => setAgeValue(e.target.value)}
                         />
                     </label>
+
+                    <label htmlFor="postcode">
+                        Postcode:
+                        <input
+                            type="text"
+                            id="postcode"
+                            name="postcode"
+                            value={postCodeValue}
+                            onChange={(e) => setPostCodeValue(e.target.value)}
+                        />
+                    </label>
+
+                    <label htmlFor="select-box">
+                        Bezorgopties:
+                        <select value={selectBoxValue} onChange={handleChange}>
+                            <option value="iedere week">iedere week</option>
+                            <option value="om de week">om de week</option>
+                            <option value="om de maand">om de maand</option>
+                        </select>
+                    </label>
+
+
                     <label htmlFor="message">
                         Leave us a message!
                         <input
@@ -179,6 +207,7 @@ function App() {
                             onChange={(e) => setMessageValue(e.target.value)}
                         />
                     </label>
+
 
                     <label htmlFor="subscribe">
                         I wanna subscribe to the newsletter!

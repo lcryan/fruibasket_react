@@ -198,7 +198,7 @@ function App() {
 
 
                     <label htmlFor="message">
-                        Leave us a message!
+                        Opmerking:
                         <input
                             type="textarea"
                             id="user message"
@@ -210,7 +210,7 @@ function App() {
 
 
                     <label htmlFor="subscribe">
-                        I wanna subscribe to the newsletter!
+                        Ik ga akkoord met de voorwaarden.
                         <input type="checkbox"
                                id="subscribe box"
                                name="subscribe box"
@@ -231,18 +231,9 @@ function App() {
 export default App
 
 
-/*### Randvoorwaarden formulier
-* Het formulier bevat de volgende velden:
-    * Voornaam
-* Achternaam
-* Leeftijd
-* Postcode
-* Selectbox met bezorgfrequentie. _Opties_: iedere week, om de week, iedere maand
-* Radiobuttons met tijdvak. _Opties_: overdag, 's avonds
-* Opmerking (textarea)
-* Akkoord met de voorwaarden (checkbox)
-* Verzendbutton
-* Pas wanneer de gebruiker op verzenden drukt, worden de formulier-waardes én de fruit-waardes in de console gelogd!*/
+
+
+
 
 
 

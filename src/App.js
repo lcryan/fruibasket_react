@@ -20,7 +20,7 @@ function App() {
     const [messageValue, setMessageValue] = React.useState('');
     const [checkBoxValue, setCheckBoxValue] = React.useState(false);
 
-    function handleChange (e){
+    function handleChange(e) {
         setSelectBoxValue(e.target.value)
     }
 
@@ -89,7 +89,7 @@ function App() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(nameValue, ageValue, messageValue, lastNameValue, checkBoxValue,selectBoxValue)
+        console.log(nameValue, ageValue, messageValue, lastNameValue, checkBoxValue, selectBoxValue)
     }
 
 

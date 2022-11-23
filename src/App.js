@@ -88,7 +88,7 @@ function App() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(nameValue, ageValue, messageValue, lastNameValue, checkBoxValue, selectBoxValue)
+        console.log(nameValue,lastNameValue, ageValue,postCodeValue,selectBoxValue, messageValue, checkBoxValue)
     }
 
 

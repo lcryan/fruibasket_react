@@ -5,7 +5,6 @@ import FruitLogo from "./assets/screenshot-logo.png"
 
 function App() {
 
-
     const [strawberries, setStrawberries] = useState(0)
     const [bananas, setBananas] = useState(0)
     const [apples, setApples] = useState(0)

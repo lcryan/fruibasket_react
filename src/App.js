@@ -3,6 +3,7 @@ import './App.css';
 import {useState} from "react";
 import FruitLogo from "./assets/screenshot-logo.png"
 
+
 function App() {
 
     const [strawberries, setStrawberries] = useState(0)
@@ -88,7 +89,7 @@ function App() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(nameValue,lastNameValue, ageValue,postCodeValue,selectBoxValue, messageValue, checkBoxValue)
+        console.log(nameValue, lastNameValue, ageValue, postCodeValue, selectBoxValue, messageValue, checkBoxValue)
     }
 
 

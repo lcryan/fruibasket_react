@@ -95,7 +95,8 @@ function App() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(nameValue, lastNameValue, ageValue, postCodeValue, selectBoxValue, radioButtonValue, messageValue, checkBoxValue)
+        console.log(nameValue, lastNameValue, ageValue, postCodeValue, selectBoxValue,
+            radioButtonValue, messageValue, checkBoxValue)
     }
 
 

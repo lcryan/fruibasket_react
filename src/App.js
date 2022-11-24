@@ -20,9 +20,6 @@ function App() {
     const [messageValue, setMessageValue] = React.useState('');
     const [checkBoxValue, setCheckBoxValue] = React.useState(false);
 
-    function handleChange(e) {
-        setSelectBoxValue(e.target.value)
-    }
 
     function strawberryAdd() {
         setStrawberries(strawberries + 1)
@@ -84,6 +81,10 @@ function App() {
         setApples(0)
         setStrawberries(0)
         setKiwis(0)
+    }
+
+    function handleChange(e) {
+        setSelectBoxValue(e.target.value)
     }
 
 

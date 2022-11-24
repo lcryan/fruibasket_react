@@ -17,6 +17,7 @@ function App() {
     const [ageValue, setAgeValue] = React.useState('');
     const [postCodeValue, setPostCodeValue] = useState('');
     const [selectBoxValue, setSelectBoxValue] = useState('')
+    const [radioButtonValue, setRadioButtonValue] = useState('daytime delivery')
     const [messageValue, setMessageValue] = React.useState('');
     const [checkBoxValue, setCheckBoxValue] = React.useState(false);
 
@@ -83,14 +84,18 @@ function App() {
         setKiwis(0)
     }
 
-    function handleChange(e) {
+    function handleChangeSelectBox(e) {
         setSelectBoxValue(e.target.value)
+    }
+
+    function handleChangeRadioButtons(e) {
+        setRadioButtonValue(e.target.value)
     }
 
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(nameValue, lastNameValue, ageValue, postCodeValue, selectBoxValue, messageValue, checkBoxValue)
+        console.log(nameValue, lastNameValue, ageValue, postCodeValue, selectBoxValue, radioButtonValue, messageValue, checkBoxValue)
     }
 
 
@@ -190,13 +195,25 @@ function App() {
 
                     <label htmlFor="select-box">
                         Bezorgopties:
-                        <select value={selectBoxValue} onChange={handleChange}>
-                            <option value="iedere week">iedere week</option>
-                            <option value="om de week">om de week</option>
-                            <option value="om de maand">om de maand</option>
+                        <select value={selectBoxValue} onChange={handleChangeSelectBox}>
+                            <option value="iedere week">Iedere week</option>
+                            <option value="om de week">Om de week</option>
+                            <option value="om de maand">Om de maand</option>
                         </select>
                     </label>
 
+                    <div className="radio">
+                        <label htmlFor="radio-buttons">
+                            Tijdvak:
+                            <input type="radio" value="daytime-delivery"
+                                   checked={radioButtonValue === "daytime-delivery"}
+                                   onChange={handleChangeRadioButtons}/>
+                            Overdag
+                        </label>
+                        <input type="radio" value="evening-delivery" checked={radioButtonValue === "evening-delivery"}
+                               onChange={handleChangeRadioButtons}/>
+                        's Avonds
+                    </div>
 
                     <label htmlFor="message">
                         Opmerking:

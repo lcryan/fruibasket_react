@@ -88,13 +88,13 @@ function App() {
                 </article>
 
 
-                    <div className="reset-button">
-                        <button className="reset" onClick={resetFruitsToZero}>reset</button>
-                    </div>
+                <div className="reset-button">
+                    <button className="reset" onClick={resetFruitsToZero}>reset</button>
+                </div>
 
             </section>
 
-<span className="form">
+            <span className="form">
             <form onSubmit={handleSubmit}>
                 <section>
                     <label htmlFor="name">
@@ -104,7 +104,7 @@ function App() {
                             id="first-name"
                             name="first-name"
                             value={nameValue}
-                           onChange={(e)=> setNameValue(e.target.value)}
+                            onChange={(e) => setNameValue(e.target.value)}
                         />
                     </label>
                 </section>
@@ -180,7 +180,7 @@ function App() {
                         Opmerking:
                         <input
                             type="textarea"
-                            id="user message"
+                            id="user-message"
                             name="user message"
                             value={messageValue}
                             onChange={(e) => setMessageValue(e.target.value)}
@@ -191,8 +191,8 @@ function App() {
                 <section>
                     <label htmlFor="subscribe">
                         <input type="checkbox"
-                               id="subscribe box"
-                               name="subscribe box"
+                               id="subscribe-box"
+                               name="subscribe-box"
                                checked={checkBoxValue}
                                onChange={(event) => setCheckBoxValue(!checkBoxValue)}
                         />
@@ -200,12 +200,13 @@ function App() {
                     </label>
                 </section>
 
-
-                <button type="submit">submit</button>
+                <div className="submit">
+                <button className="submit-button" type="submit">submit</button>
+                </div>
 
             </form>
 
-</span>
+</span>¬
         </>
     );
 }

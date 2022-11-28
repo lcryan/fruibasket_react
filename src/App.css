@@ -1,13 +1,14 @@
 body {
     font-family: "Comic Sans MS", sans-serif;
     background-color: paleturquoise;
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
     color: grey;
     margin-top: 50px;
 }
@@ -20,12 +21,12 @@ article {
     font-size: 30px;
     border-color: grey;
     border-style: solid;
-    border-width: 1px;
+    border-width: 4px;
     border-radius: 20px;
-    margin-left: 515px;
     width: 400px;
+    margin-left: 250px;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: antiquewhite;
     background-color: lightcoral;
 }
@@ -47,8 +48,6 @@ button {
 .reset-button {
     display: flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
     padding-bottom: 50px;
 }
 
@@ -75,12 +74,16 @@ button {
 }
 
 .form {
-    margin: 50px;
     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     border: grey 2px solid;
+    border-radius: 20px;
     width: 300px;
-    height: 300px;
-    padding: 50px;
+    height: 600px;
+    padding: 20px;
+    margin: 50px 50px 50px 280px;
 }
 
 .submit-button{
@@ -89,13 +92,26 @@ button {
     margin-left: 90px;
 }
 
+#first-name, #last-name, #user-age, #postcode, #select-box{
+    display: flex;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+
 #user-message{
     display: flex;
     height: 50px;
     align-content: flex-start;
     margin-top: 10px;
+    border-radius: 10px;
+    border-style: none;
 }
 
 section {
+    display: flex;
     margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
 }

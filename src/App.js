@@ -123,7 +123,7 @@ function App() {
 
                 <section>
                     <label htmlFor="age">
-                        Age:
+                        Leeftijd:
                         <input
                             type="number"
                             id="user-age"
@@ -152,10 +152,11 @@ function App() {
                 <section>
                     <label htmlFor="select-box">
                         Bezorgopties:
-                        <select value={selectBoxValue} onChange={handleChangeSelectBox}>
+                        <select id="select-box" value={selectBoxValue} onChange={handleChangeSelectBox}>
                             <option value="iedere week">Iedere week</option>
                             <option value="om de week">Om de week</option>
                             <option value="om de maand">Om de maand</option>
+
                         </select>
                     </label>
                 </section>
@@ -164,7 +165,7 @@ function App() {
                     <div className="radio">
                         <label htmlFor="radio-buttons">
                             Tijdvak:
-                            <input type="radio" value="daytime-delivery"
+                            <input type="radio" value="daytime-delivery" id="daytime-delivery"
                                    checked={radioButtonValue === "daytime-delivery"}
                                    onChange={handleChangeRadioButtons}/>
                             Overdag
@@ -181,7 +182,7 @@ function App() {
                         <input
                             type="textarea"
                             id="user-message"
-                            name="user message"
+                            name="user-message"
                             value={messageValue}
                             onChange={(e) => setMessageValue(e.target.value)}
                         />

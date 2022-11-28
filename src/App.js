@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from "./components/Counter";
 import './App.css';
 import {useState} from "react";
 import FruitLogo from "./assets/screenshot-logo.png"
@@ -20,62 +21,6 @@ function App() {
     const [radioButtonValue, setRadioButtonValue] = useState('daytime delivery')
     const [messageValue, setMessageValue] = React.useState('');
     const [checkBoxValue, setCheckBoxValue] = React.useState(false);
-
-
-    function strawberryAdd() {
-        setStrawberries(strawberries + 1)
-    }
-
-    function strawberryMin() {
-        if (strawberries === 0) {
-            alert("You cannot go below zero")
-
-        } else {
-            setStrawberries(strawberries - 1)
-        }
-    }
-
-    function bananasAdd() {
-        setBananas(bananas + 1)
-    }
-
-    function bananasMin() {
-        if (bananas === 0) {
-            alert("You cannot go below zero")
-
-        } else {
-            setBananas(strawberries - 1)
-        }
-    }
-
-
-    function applesAdd() {
-        setApples(apples + 1)
-    }
-
-    function applesMin() {
-        if (apples === 0) {
-            alert("You cannot go below zero")
-
-        } else {
-            setApples(apples - 1)
-        }
-    }
-
-
-    function kiwisAdd() {
-        setKiwis(kiwis + 1)
-    }
-
-    function kiwisMin() {
-        if (kiwis === 0) {
-            alert("You cannot go below zero")
-
-        } else {
-            setKiwis(kiwis - 1)
-        }
-    }
-
 
     function resetFruitsToZero() {
         setBananas(0)
@@ -112,31 +57,34 @@ function App() {
             <section className="fruit-containers">
                 <article>
                     <h3> 🍓 Aardbeien </h3>
-                    <button type="button" name="control-button" onClick={strawberryMin}>-</button>
-                    <div> {strawberries} </div>
-                    <button type="button" name="control-button" onClick={strawberryAdd}>+</button>
+                    <Counter
+                        fruit={strawberries}
+                        setFruit={setStrawberries}
+                    />
                 </article>
 
-
                 <article>
-                    <h3>"banana-name"> 🍌 Bananen </h3>
-                    <button type="button" name="control-button" onClick={bananasMin}>-</button>
-                    <div> {bananas} </div>
-                    <button type="button" name="control-button" onClick={bananasAdd}>+</button>
+                    <h3> 🍌 Bananen </h3>
+                    <Counter
+                        fruit={bananas}
+                        setFruit={setBananas}
+                    />
                 </article>
 
                 <article>
                     <h3> 🍏 Appels </h3>
-                    <button type="button" name="control-button" onClick={applesMin}>-</button>
-                    <div> {apples} </div>
-                    <button type="button" name="control-button" onClick={applesAdd}>+</button>
+                    <Counter
+                        fruit={apples}
+                        setFruit={setApples}
+                    />
                 </article>
 
                 <article>
                     <h3> 🥝 Kiwi's </h3>
-                    <button type="button" name="control-button" onClick={kiwisMin}>-</button>
-                    <div> {kiwis} </div>
-                    <button type="button" name="control-button" onClick={kiwisAdd}>+</button>
+                    <Counter
+                        fruit={kiwis}
+                        setFruit={setKiwis}
+                    />
                 </article>
 
                 <article>
@@ -147,9 +95,8 @@ function App() {
             </section>
 
 
-
-                <form onSubmit={handleSubmit}>
-                    <section>
+            <form onSubmit={handleSubmit}>
+                <section>
                     <label htmlFor="name">
                         Voornaam:
                         <input
@@ -157,11 +104,11 @@ function App() {
                             id="first-name"
                             name="first-name"
                             value={nameValue}
-                            onChange={(e) => setNameValue(e.target.value)}
+                           onChange={(e)=> setNameValue(e.target.value)}
                         />
                     </label>
-                    </section>
-                    <section>
+                </section>
+                <section>
                     <label htmlFor="last-name">
                         Achternaam:
                         <input
@@ -174,7 +121,7 @@ function App() {
                     </label>
                 </section>
 
-                    <section>
+                <section>
                     <label htmlFor="age">
                         Age:
                         <input
@@ -187,9 +134,9 @@ function App() {
                             onChange={(e) => setAgeValue(e.target.value)}
                         />
                     </label>
-                    </section>
+                </section>
 
-                    <section>
+                <section>
                     <label htmlFor="postcode">
                         Postcode:
                         <input
@@ -202,7 +149,7 @@ function App() {
                     </label>
                 </section>
 
-                    <section>
+                <section>
                     <label htmlFor="select-box">
                         Bezorgopties:
                         <select value={selectBoxValue} onChange={handleChangeSelectBox}>
@@ -213,7 +160,7 @@ function App() {
                     </label>
                 </section>
 
-                    <section>
+                <section>
                     <div className="radio">
                         <label htmlFor="radio-buttons">
                             Tijdvak:
@@ -228,7 +175,7 @@ function App() {
                     </div>
                 </section>
 
-                    <section>
+                <section>
                     <label htmlFor="message">
                         Opmerking:
                         <input
@@ -239,23 +186,21 @@ function App() {
                             onChange={(e) => setMessageValue(e.target.value)}
                         />
                     </label>
-                    </section>
+                </section>
 
-                    <section>
+                <section>
                     <label htmlFor="subscribe">
-                        Ik ga akkoord met de voorwaarden.
                         <input type="checkbox"
                                id="subscribe box"
                                name="subscribe box"
                                checked={checkBoxValue}
                                onChange={(event) => setCheckBoxValue(!checkBoxValue)}
                         />
+                        Ik ga akkoord met de voorwaarden.
                     </label>
-                    </section>
-                    <button type="submit">submit</button>
-                </form>
-
-
+                </section>
+                <button type="submit">submit</button>
+            </form>
 
 
         </>

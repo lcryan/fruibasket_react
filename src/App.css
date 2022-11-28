@@ -1,0 +1,117 @@
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    background-color: paleturquoise;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: grey;
+    margin-top: 50px;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 30px;
+    border-color: grey;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 20px;
+    width: 400px;
+    margin-left: 250px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: antiquewhite;
+    background-color: lightcoral;
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    border-style: none;
+    background-color: darkturquoise;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: normal;
+    font-size: 20px;
+    color: antiquewhite;
+
+}
+
+.reset-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.reset {
+    width: 100px;
+    height: 50px;
+    border-style: none;
+    border-radius: 50px;
+    background-color: darkturquoise;
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fruit-logo {
+    width: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.fruit-logo-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: grey 2px solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 600px;
+    padding: 20px;
+    margin: 50px 50px 50px 280px;
+}
+
+.submit-button{
+    margin-top: 80px;
+    width: 100px;
+    margin-left: 90px;
+}
+
+#first-name, #last-name, #user-age, #postcode, #select-box{
+    display: flex;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+
+#user-message{
+    display: flex;
+    height: 50px;
+    align-content: flex-start;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+section {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -29,7 +29,7 @@ Zoals je ziet is de styling niet belangrijk, focus je in eerste instantie op de 
 * Je maakt gebruik van de useState hook van React om de hoeveelheden bij te houden
 * Klanten hebben de vrijheid om te kiezen tussen vier typen fruit:
   1. Bananen 🍌
-  2. Aarbeien 🍓
+  2. Aardbeien 🍓
   3. Appels 🍏
   4. Kiwi's 🥝
 * Elk type fruit heeft twee buttons: één die de hoeveelheid verhoogd (`+`) en één die de hoeveelheid verlaagd (`-`)

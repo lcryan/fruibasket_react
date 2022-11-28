@@ -109,45 +109,47 @@ function App() {
 
             <h1>Snoep gezond, eet lekker fruit! Bestel daarom hier bij ons!</h1>
 
-
-            <div className="container-strawberries">
-                <h3 className="strawberry-name"> 🍓 Aardbeien </h3>
-                <button className="control-button" onClick={strawberryMin}>-</button>
-                <div className="counter"> {strawberries} </div>
-                <button className="control-button" onClick={strawberryAdd}>+</button>
-
-            </div>
-
-            <div className="container-bananas">
-                <h3 className="banana-name"> 🍌 Bananen </h3>
-                <button className="control-button" onClick={bananasMin}>-</button>
-                <div className="counter"> {bananas} </div>
-                <button className="control-button" onClick={bananasAdd}>+</button>
-
-            </div>
-
-            <div className="container-apples">
-                <h3 className="apples-name"> 🍏 Appels </h3>
-                <button className="control-button" onClick={applesMin}>-</button>
-                <div className="counter"> {apples} </div>
-                <button className="control-button" onClick={applesAdd}>+</button>
-
-            </div>
-
-            <div className="container-kiwis">
-                <h3 className="kiwi-name"> 🥝 Kiwi's </h3>
-                <button className="control-button" onClick={kiwisMin}>-</button>
-                <div className="counter"> {kiwis} </div>
-                <button className="control-button" onClick={kiwisAdd}>+</button>
-            </div>
-            <div className="reset-button">
-                <button className="reset" onClick={resetFruitsToZero}>reset</button>
-            </div>
+            <section className="fruit-containers">
+                <article>
+                    <h3> 🍓 Aardbeien </h3>
+                    <button type="button" name="contrl-" onClick={strawberryMin}>-</button>
+                    <div className="counter"> {strawberries} </div>
+                    <button className="control-button" onClick={strawberryAdd}>+</button>
+                </article>
 
 
-            <div className="from-document">
+                <article>
+                    <h3>"banana-name"> 🍌 Bananen </h3>
+                    <button className="control-button" onClick={bananasMin}>-</button>
+                    <div className="counter"> {bananas} </div>
+                    <button className="control-button" onClick={bananasAdd}>+</button>
+                </article>
+
+                <article>
+                    <h3> 🍏 Appels </h3>
+                    <button className="control-button" onClick={applesMin}>-</button>
+                    <div className="counter"> {apples} </div>
+                    <button className="control-button" onClick={applesAdd}>+</button>
+                </article>
+
+                <article>
+                    <h3> 🥝 Kiwi's </h3>
+                    <button className="control-button" onClick={kiwisMin}>-</button>
+                    <div className="counter"> {kiwis} </div>
+                    <button className="control-button" onClick={kiwisAdd}>+</button>
+                </article>
+
+                <article>
+                    <div className="reset-button">
+                        <button className="reset" onClick={resetFruitsToZero}>reset</button>
+                    </div>
+                </article>
+            </section>
+
+
 
                 <form onSubmit={handleSubmit}>
+                    <section>
                     <label htmlFor="name">
                         Voornaam:
                         <input
@@ -169,7 +171,9 @@ function App() {
                             onChange={(e) => setLastNameValue(e.target.value)}
                         />
                     </label>
+                </section>
 
+                    <section>
                     <label htmlFor="age">
                         Age:
                         <input
@@ -182,7 +186,9 @@ function App() {
                             onChange={(e) => setAgeValue(e.target.value)}
                         />
                     </label>
+                    </section>
 
+                    <section>
                     <label htmlFor="postcode">
                         Postcode:
                         <input
@@ -193,7 +199,9 @@ function App() {
                             onChange={(e) => setPostCodeValue(e.target.value)}
                         />
                     </label>
+                </section>
 
+                    <section>
                     <label htmlFor="select-box">
                         Bezorgopties:
                         <select value={selectBoxValue} onChange={handleChangeSelectBox}>
@@ -202,7 +210,9 @@ function App() {
                             <option value="om de maand">Om de maand</option>
                         </select>
                     </label>
+                </section>
 
+                    <section>
                     <div className="radio">
                         <label htmlFor="radio-buttons">
                             Tijdvak:
@@ -215,7 +225,9 @@ function App() {
                                onChange={handleChangeRadioButtons}/>
                         's Avonds
                     </div>
+                </section>
 
+                    <section>
                     <label htmlFor="message">
                         Opmerking:
                         <input
@@ -226,8 +238,9 @@ function App() {
                             onChange={(e) => setMessageValue(e.target.value)}
                         />
                     </label>
+                    </section>
 
-
+                    <section>
                     <label htmlFor="subscribe">
                         Ik ga akkoord met de voorwaarden.
                         <input type="checkbox"
@@ -237,10 +250,11 @@ function App() {
                                onChange={(event) => setCheckBoxValue(!checkBoxValue)}
                         />
                     </label>
+                    </section>
                     <button type="submit">submit</button>
                 </form>
 
-            </div>
+
 
 
         </>

@@ -87,14 +87,14 @@ function App() {
                     />
                 </article>
 
-                <article>
+
                     <div className="reset-button">
                         <button className="reset" onClick={resetFruitsToZero}>reset</button>
                     </div>
-                </article>
+
             </section>
 
-
+<span className="form">
             <form onSubmit={handleSubmit}>
                 <section>
                     <label htmlFor="name">
@@ -199,10 +199,13 @@ function App() {
                         Ik ga akkoord met de voorwaarden.
                     </label>
                 </section>
+
+
                 <button type="submit">submit</button>
+
             </form>
 
-
+</span>
         </>
     );
 }

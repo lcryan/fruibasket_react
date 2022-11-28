@@ -112,31 +112,31 @@ function App() {
             <section className="fruit-containers">
                 <article>
                     <h3> 🍓 Aardbeien </h3>
-                    <button type="button" name="contrl-" onClick={strawberryMin}>-</button>
-                    <div className="counter"> {strawberries} </div>
-                    <button className="control-button" onClick={strawberryAdd}>+</button>
+                    <button type="button" name="control-button" onClick={strawberryMin}>-</button>
+                    <div> {strawberries} </div>
+                    <button type="button" name="control-button" onClick={strawberryAdd}>+</button>
                 </article>
 
 
                 <article>
                     <h3>"banana-name"> 🍌 Bananen </h3>
-                    <button className="control-button" onClick={bananasMin}>-</button>
-                    <div className="counter"> {bananas} </div>
-                    <button className="control-button" onClick={bananasAdd}>+</button>
+                    <button type="button" name="control-button" onClick={bananasMin}>-</button>
+                    <div> {bananas} </div>
+                    <button type="button" name="control-button" onClick={bananasAdd}>+</button>
                 </article>
 
                 <article>
                     <h3> 🍏 Appels </h3>
-                    <button className="control-button" onClick={applesMin}>-</button>
-                    <div className="counter"> {apples} </div>
-                    <button className="control-button" onClick={applesAdd}>+</button>
+                    <button type="button" name="control-button" onClick={applesMin}>-</button>
+                    <div> {apples} </div>
+                    <button type="button" name="control-button" onClick={applesAdd}>+</button>
                 </article>
 
                 <article>
                     <h3> 🥝 Kiwi's </h3>
-                    <button className="control-button" onClick={kiwisMin}>-</button>
-                    <div className="counter"> {kiwis} </div>
-                    <button className="control-button" onClick={kiwisAdd}>+</button>
+                    <button type="button" name="control-button" onClick={kiwisMin}>-</button>
+                    <div> {kiwis} </div>
+                    <button type="button" name="control-button" onClick={kiwisAdd}>+</button>
                 </article>
 
                 <article>
@@ -160,7 +160,8 @@ function App() {
                             onChange={(e) => setNameValue(e.target.value)}
                         />
                     </label>
-
+                    </section>
+                    <section>
                     <label htmlFor="last-name">
                         Achternaam:
                         <input
